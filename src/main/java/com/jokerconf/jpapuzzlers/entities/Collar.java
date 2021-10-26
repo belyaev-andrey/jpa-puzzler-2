@@ -2,10 +2,8 @@ package com.jokerconf.jpapuzzlers.entities;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.Hibernate;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Table(name = "collar")
 @Entity

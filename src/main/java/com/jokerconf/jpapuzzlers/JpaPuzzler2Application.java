@@ -18,6 +18,6 @@ public class JpaPuzzler2Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        petRepository.findAll().forEach(System.out::println);
+        petRepository.findById(1L).ifPresent(System.out::println);
     }
 }

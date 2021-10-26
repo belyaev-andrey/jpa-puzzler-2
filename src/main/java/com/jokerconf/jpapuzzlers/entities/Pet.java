@@ -3,8 +3,6 @@ package com.jokerconf.jpapuzzlers.entities;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 
@@ -24,7 +22,7 @@ public class Pet {
     @ManyToOne
     private Owner owner;
 
-    @OneToOne(mappedBy = "pet")
+    @OneToOne(mappedBy = "pet", fetch = FetchType.LAZY)
     private Collar collar;
 
     @Override
